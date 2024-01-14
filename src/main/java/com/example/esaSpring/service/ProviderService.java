@@ -1,8 +1,7 @@
 package com.example.esaSpring.service;
 
-import com.example.esaSpring.dao.ProviderDAO;
 import com.example.esaSpring.entity.Provider;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.esaSpring.repository.ProviderRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,26 +13,26 @@ import java.util.List;
 @EnableTransactionManagement
 public class ProviderService {
 
-    private ProviderDAO providerDAO;
+    private ProviderRepository providerRepository;
 
-    public ProviderService(ProviderDAO providerDAO) {
-        this.providerDAO = providerDAO;
+    public ProviderService(ProviderRepository providerRepository) {
+        this.providerRepository = providerRepository;
     }
 
-    public List<Provider> getAllProviders() {return providerDAO.getAllProviders();}
+    public List<Provider> getAllProviders() {return providerRepository.getAllProviders();}
 
-    public void addProvider(Provider provider) {providerDAO.addProvider(provider);}
+    public void addProvider(Provider provider) {providerRepository.addProvider(provider);}
 
     public Provider getProviderById(Integer id) {
-        return providerDAO.getProviderById(id);
+        return providerRepository.getProviderById(id);
     }
 
     public void updateProvider(Provider provider) {
-        providerDAO.updateProvider(provider);
+        providerRepository.updateProvider(provider);
     }
 
     public void deleteProviderById(Integer id) {
-        providerDAO.deleteProviderById(id);
+        providerRepository.deleteProviderById(id);
     }
 
 }

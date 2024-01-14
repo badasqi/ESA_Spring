@@ -1,6 +1,6 @@
 package com.example.esaSpring.service;
-import com.example.esaSpring.dao.ClientDAO;
 import com.example.esaSpring.entity.Client;
+import com.example.esaSpring.repository.ClientRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,21 +12,23 @@ import java.util.List;
 @EnableTransactionManagement
 public class ClientService {
 
-    private final ClientDAO clientDAO;
+    private final ClientRepository clientRepository;
 
-    public ClientService(ClientDAO clientDAO) {this.clientDAO = clientDAO;}
+    public ClientService(ClientRepository clientRepository) {
+        this.clientRepository = clientRepository;
+    }
 
     public List<Client> getAllClients() {
-        return clientDAO.getAllClients();
+        return clientRepository.getAllClients();
     }
 
     public void addClient(Client client) {
-        clientDAO.addClient(client);
+        clientRepository.addClient(client);
     }
 
-    public Client getClientById(Integer id) {return clientDAO.getClientById(id);}
+    public Client getClientById(Integer id) {return clientRepository.getClientById(id);}
 
-    public void updateClient(Client client) {clientDAO.updateClient(client);}
+    public void updateClient(Client client) {clientRepository.updateClient(client);}
 
-    public void deleteClientById(Integer id) {clientDAO.deleteClientById(id);}
+    public void deleteClientById(Integer id) {clientRepository.deleteClientById(id);}
 }
