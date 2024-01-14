@@ -25,8 +25,9 @@ ViewResolver:
 
 ## Business layer
 Логика приложения реализована в Service классах
+<pre>
 ```
-<pre>Java
+Java
 @Service
 @Transactional
 @EnableTransactionManagement
@@ -50,5 +51,5 @@ public class ClientService {
 
     public void deleteClientById(Integer id) {clientDAO.deleteClientById(id);}
 }
-<pre/>
 ```
+<pre/>
