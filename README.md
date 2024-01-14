@@ -105,3 +105,6 @@ public class ClientService {
 
 ![image](https://github.com/badasqi/ESA_Spring/assets/78803025/43a1ea8e-689e-4d19-9f94-07092e2204e0)
 
+API для DELETE, PUT - http://localhost:8080/esaSpring_war/clients/{id}; http://localhost:8080/esaSpring_war/providers/{id}
+
+
