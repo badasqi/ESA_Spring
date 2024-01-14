@@ -3,12 +3,10 @@ package com.example.esaSpring.controller;
 import com.example.esaSpring.entity.Provider;
 import com.example.esaSpring.service.ProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.sound.sampled.Port;
 import java.util.List;
 
 @Controller
@@ -59,5 +57,4 @@ public class ProviderController {
         }
         return "redirect:/providers"; // Перенаправление на список провайдеров после удаления
     }
-    // Другие методы контроллера для добавления, обновления и удаления провайдеров
 }

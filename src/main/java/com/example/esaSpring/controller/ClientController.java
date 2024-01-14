@@ -61,5 +61,4 @@ public class ClientController {
         clientService.deleteClientById(id);
         return "redirect:/clients"; // Перенаправление на список клиентов после удаления
     }
-    // Другие методы контроллера для добавления, обновления и удаления клиентов
 }
