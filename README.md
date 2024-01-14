@@ -3,7 +3,7 @@
 БД - MySQL
 Предметная область Provider, Client.
 ## Конфигурация приложения 
-Конфигурационный файл для Spring Framework applicationContext.xml
+Конфигурационный файл для Spring Framework - applicationContext.xml
 
 Component Scanning:
 ```
