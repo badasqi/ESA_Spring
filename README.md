@@ -26,8 +26,7 @@ ViewResolver:
 ## Business layer
 Логика приложения реализована в Service классах
 <pre>
-```
-Java
+```java
 @Service
 @Transactional
 @EnableTransactionManagement
