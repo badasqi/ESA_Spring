@@ -52,7 +52,6 @@ public class Provider implements Serializable{
     public List<Client> getClients() {
         return clients;
     }
-
     public void setClients(List<Client> clients) {
         this.clients = clients;
     }
@@ -63,7 +62,6 @@ public class Provider implements Serializable{
         clients.add(client);
         client.setNameProvider(this.name);
     }
-
     public void removeClient(Client client) {
         clients.remove(client);
         client.setNameProvider(null);
