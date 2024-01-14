@@ -54,7 +54,7 @@ public class ClientService {
 </pre>
 
 
-<pre>
+
 ```java
 public class Example {
     public static void main(String[] args) {
@@ -62,4 +62,4 @@ public class Example {
     }
 }
 ```
-</pre>
+
